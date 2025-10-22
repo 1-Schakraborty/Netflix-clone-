@@ -154,10 +154,11 @@ nav img {
     color: white;
     font-weight: 500;
     font-size: 20px;
-    width: 300px;
+    width: 370px;
     border-radius: 4px;
     background-color: rgba(23, 23, 23, 0.7);
     border: 1px solid rgba(255, 253, 253, 0.5);
+    text-align: center;
 }
 
 .hero-buttons {
@@ -342,7 +343,9 @@ section.first>div :nth-child(2) {
     transition: all 1s ease-out;
     font-size: 24px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: #2d2d2d;
     padding: 24px;
     max-width: 60vw;
@@ -362,10 +365,53 @@ section.first>div :nth-child(2) {
     font-size: 40px;
 }
 
-.faqbox svg {
+.faqbox > svg {
     filter: invert(1);
     width: 30px;
     height: 30px;
+    align-self: flex-end;
+}
+
+.faq-answer {
+  width: 100%;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.faqbox.open {
+  background-color: #3a3a3a;
+  transition: background-color 0.3s ease;
+}
+
+/* Align icon to the right of the question */
+.faqbox > span {
+  flex: 1;
+  font-weight: 500;
+}
+
+.lang-dropdown {
+  position: absolute;
+  background-color: rgba(23, 23, 23, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 8px 0;
+  width: 125px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  z-index: 100;
+}
+
+.lang-option {
+  padding: 8px 0;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.lang-option:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 footer {
